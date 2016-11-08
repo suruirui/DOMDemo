@@ -5,6 +5,37 @@
 	<title>dataset浏览器兼容版</title>
 </head>
 <body>
-	
+	<div id="text" data-user-name="lisi" data-age="20"></div>
 </body>
+<script>
+    function $(id){
+    	return document.getElementById(id);
+    }
+  
+	function getDataSet(element){
+		if(element.dataset){
+			return element.dataset;
+		}else{
+			var attrs = element.attributes;
+			var dataName = "";
+			var dataSet = {};
+			//遍历所有属性
+			for(var i=0;i<attrs.length;i++){
+				if(!/^data-/.test(attrs[i].name))
+					continue;
+				dataName = attrs[i].name.slice(5);
+				dataName = dataName.replace(/\-([a-zA-Z])/g, function(value, lowerChar) {
+                return lowerChar.toUpperCase();
+            });
+			//以dataset存储该键值对
+				dataSet[dataName] = attrs[i].value;
+			}
+			return dataSet;
+		}
+	}
+	// var ds = $("text").dataset;
+	var ds = getDataSet($("text"));
+    console.log(ds.userName +","+ds.age);
+    // console.log(ds);
+</script>
 </html>

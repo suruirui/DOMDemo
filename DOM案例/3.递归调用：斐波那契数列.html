@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //斐波那契数列，从0和1开始，后面的数位是前两位相加的和
+    // 0(0) 1(1) 1(2) 2(3) 3(4) 5(5).. 8(6) 13 7 21 8 34 9 55 10
+    function Fibonacci(n){  //编写函数，求第N位的时候，斐波那契数列的值
+//        if(n < 2){
+//            return n;
+//        }else{
+//            return Fibonacci(n-1) + Fibonacci(n-2);
+//        }
+      return   n<2?n : Fibonacci(n-1) + Fibonacci(n-2);
+    }
+//    console.log(Fibonacci(5));
+//    console.log(Fibonacci(100));
+    /**
+     * 性能优化版的斐波那契数列
+     */
+            function fib(n){
+
+                //定义一个缓存对象，将计算过的值存储进来不需要重复计算
+                var cache = {
+                    0:0,
+                    1:1
+                };
+                if (typeof cache[n] === 'number') {
+                    return cache[n];
+                }
+
+              var result = cache[n] = Fibonacci(n-1) + Fibonacci(n-2);
+              return result;
+
+    }
+    console.log(fib(50));
+
+</script>
+</body>
+</html>

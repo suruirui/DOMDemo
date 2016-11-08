@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 512px;
+            height: 400px;
+            overflow: hidden;
+            margin: 100px auto;
+            position: relative;
+            cursor: pointer;
+        }
+        .ctrl{
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            left: 0;
+        }
+        .up{
+            top:0;
+        }
+        .down{
+            bottom:0;
+        }
+        .pic{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="mi.png" id="pic" class="pic" alt=""/>
+    <div class="ctrl up" id="up"></div>
+    <div class="ctrl down" id="down"></div>
+</div>
+<script>
+    function $(id){return document.getElementById(id);}
+
+    var num = 0;
+    var timer = null;
+    $("up").onmouseover = function () {
+        timer = setInterval(function () {
+            num -=3;
+            num >= -1070 ? $("pic").style.top = num+"px" :clearInterval(timer);
+        },30);
+    }
+
+    $("down").onmouseover = function(){
+         timer =  setInterval(function(){
+             num++;
+             num <=0 ?$("pic").style.top = num+"px": clearInterval(timer);
+         },30);
+    }
+
+    $("up").onmouseout = function () {
+        clearInterval(timer);
+    }
+    $("down").onmouseout = function () {
+        clearInterval(timer);
+    }
+
+
+</script>
+</body>
+</html>

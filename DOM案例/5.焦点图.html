@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            display: block;
+        }
+        .box{
+            width: 490px;
+            height: 170px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+            position: relative;
+        }
+        .slide{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        ul{
+            width: 1000%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .slide ul li{
+           /*float: left;*/
+        }
+        ol{
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translate(-50%);
+        }
+        ol li{
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 18px;
+            cursor: pointer;
+        }
+        ol .cur{
+            background-color: #ff0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="scroll">
+    <div class="slide">
+        <ul>
+            <li><img src="images/01.jpg" alt=""/></li>
+            <li><img src="images/02.jpg" alt=""/></li>
+            <li><img src="images/03.jpg" alt=""/></li>
+            <li><img src="images/04.jpg" alt=""/></li>
+            <li><img src="images/05.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <ol>
+        <li class="cur">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    var ul = $("scroll").children[0].children[0];
+    var ol = $("scroll").children[1];
+    var lis = ol.children;
+    var start =0, target = 0;
+    for(var i=0; i<lis.length;i++){
+        lis[i].index = i;
+        lis[i].onmouseover = function () {
+            //去掉ol li的所有颜色
+            for(var j=0;j<lis.length;j++){
+                lis[j].className = "";
+            }
+            this.className = "cur";
+//            target =  -this.index * 490;
+            target =  -this.index * 170;
+        }
+    }
+
+    setInterval(function () {
+        //缓动动画公式
+        start = start + (target -start)/10;
+//        ul.style.left = start +"px";
+        ul.style.top = start +"px";
+    },30);
+
+    /**
+     *  鼠标在第 2 个小方块的时候 ul向左移动1个图片的距离 1
+     *  鼠标在第 3 个小方块的时候 ul向左移动2个图片的距离 2
+     *  鼠标在第 4 个小方块的时候 ul向左移动3个图片的距离 3
+     *
+     */
+</script>
+</html>

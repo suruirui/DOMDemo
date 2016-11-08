@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="test" data-user-name-x="lisi" data-age="20" data-gender="男"></div>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+//    var ds = $("test").dataset;
+//    console.log(ds.userNameX + ","+ds.age);
+//
+//    console.log($("test").getAttribute("data-user-name-x"));
+
+    //兼容版本的dataset获取方法
+    //getElementsByClassName()
+    function getDataSet(elem){//elem节点对象
+        if(elem.dataset){  //如果浏览器支持，就直接使用并返回dataset
+            return elem.dataset;
+        }else{      //如果浏览器不支持
+            var dataSet = {};
+            var attrName;
+            //获取节点对象的所有属性 attributes
+            var attrs = elem.attributes;
+            //对所有属性进行遍历
+           for(var i=0; i<attrs.length;i++){
+               //找出以data-开头的属性
+               if(!/^data-/.test(attrs[i].name)){
+                   continue;
+               }
+               //截取data-*属性，从5位开始
+               attrName = attrs[i].name.slice(5);
+               // 如果截取后的data-*属性有-,将其转换成大写
+               attrName = attrName.replace(/\-([a-zA-Z])/g,function(value,lowerCase){
+                   return lowerCase.toUpperCase();
+               });
+               //将属性和对应的值，存入dataSet对象
+               dataSet[attrName] = attrs[i].value;
+           }
+           return dataSet;
+        }
+    }
+    var dataSet = getDataSet($("test"));
+    console.log(dataSet.userNameX +","+dataSet.age + "," + dataSet.gender);
+</script>
+</html>
