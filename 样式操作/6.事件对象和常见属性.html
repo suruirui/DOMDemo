@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    asdasda
+</div>
+</body>
+<script>
+    /**
+     * 事件对象：  onclick onchange onmouseover onmouseout onblur
+     */
+    document.onclick = function(event){ //event事件对象
+
+        //ie 678 等低版本浏览器需要 window.event
+//          console.log(window.event.clientX);//clientX到显示区域的水平距离
+//        console.log(window.event.clientY);//clientX到显示区域的垂直距离
+        //兼容写法
+        var event = event || window.event;
+        console.log("clientX:",event.clientX);//clientX到显示区域的水平距离
+        console.log("clientY:",event.clientY);//clientX到显示区域的垂直距离
+
+        //event事件对象其他属性 pageX/Y  页面的水平/垂直距离
+        console.log("pageX:",event.pageX);
+        console.log("pageY:",event.pageY);
+        //screenX/Y 屏幕的水平/垂直距离
+        console.log("screenX:",event.screenX);
+        console.log("screenY:",event.screenY);
+
+    }
+</script>
+</html>

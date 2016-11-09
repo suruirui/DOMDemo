@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #demo{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="demo">
+
+</div>
+</body>
+<script>
+    var demo  = document.getElementById("demo");
+    demo.onmousemove = function(event) { //onmousemove鼠标移动事件
+        var event = event || window.event;
+        var x =  event.clientX - demo.offsetLeft;
+        var y = event.clientY - demo.offsetTop;
+        demo.innerHTML = x+"px,"+y+"px";
+    }
+</script>
+</html>
