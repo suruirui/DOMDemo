@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="base.css"/>
+    <link id="link" rel="stylesheet" href="skin.spring.css"/>
+    <title></title>
+</head>
+<body>
+<div class="m-tw clearfix">
+    <div class="u-img">
+        <a href="#"><img src="zhm.jpg" alt=""></a>
+    </div>
+    <div class="txt">
+        <h3><a href="#">张惠妹</a></h3>
+        <p>亞洲國寶級傳奇天后「 a MEI」我是a MEI，一個你認識很久，卻認識不完的女人。</p>
+    </div>
+</div>
+<button id="change">春</button>
+<button id="change2">夏</button>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    //        $("link").href = "skin.summer.css"; //写完整路径
+    $("change2").onclick = function () {
+        $("link").href = "skin.summer.css";//写完整路径
+    }
+    $("change").onclick = function () {
+        $("link").href = "skin.spring.css";//写完整路径
+    }
+
+</script>
+</html>

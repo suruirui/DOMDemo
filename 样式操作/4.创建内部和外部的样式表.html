@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="base.css">
+    <title></title>
+</head>
+<body>
+<div class="m-tw clearfix">
+    <div class="u-img">
+        <a href="#"><img src="zhm.jpg" alt=""></a>
+    </div>
+    <div class="txt">
+        <h3><a href="#">张惠妹</a></h3>
+        <p>亞洲國寶級傳奇天后「 a MEI」我是a MEI，一個你認識很久，卻認識不完的女人。</p>
+    </div>
+</div>
+<button id="create0">创建外部样式表</button>
+<button id="create1">创建内部样式表</button>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    //创建外部样式表
+    $("create0").onclick = function(){
+        var link = document.createElement('link');  //创建link节点
+        link.rel = 'stylesheet';  //设置link节点属性
+        link.href = 'skin.summer.css';
+        document.getElementsByTagName('head')[0].appendChild(link);//将link节点添加到head
+    }
+    //创建内部样式表
+    $("create1").onclick = function(){
+        var style = document.createElement('style');//创建style节点
+        style.innerText = 'body{background-color: #fefaf7;}\
+									.m-tw .u-img{border-color: #a84c5b;}\
+									.m-tw p{color: #6d3e48;}\
+									.m-tw h3{background-color: #a84c5b;}\
+									.m-tw h3 a, .m-tw h3 a:hover{color: #fff;}';
+        document.getElementsByTagName('head')[0].appendChild(style);//将style节点添加到head
+    }
+</script>
+</html>

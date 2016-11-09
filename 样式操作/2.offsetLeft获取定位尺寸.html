@@ -33,13 +33,21 @@
 </body>
 <script>
     function $(id){return document.getElementById(id);}
-    console.log(($("child").offsetLeft));
+    //    offsetTop offsetLeft 返回距离上级盒子（带有定位）顶部/左边的位置
+    //    * 如果父级都没有定位则以body为准
+    console.log(($("child").offsetLeft));  //只能读这个值
     console.log(($("child").offsetTop));
     console.dir($("child"));//dir打印对象
-//    offsetTop offsetLeft 返回距离上级盒子（带有定位）顶部/左边的位置
-//    * 如果父级都没有定位则以body为准
+    //offsetParent
+    console.log($("child").offsetParent.tagName);
+    //offsetLeft和style.left区别
+    $("child").style.left = "20px";  //style.left可以设置left值
+    console.log($("child").style.left); //可以读取内联样式的left值
+
     /**
      * offset家族: offsetWidth offsetHeight offsetLeft offsetTop
+     * offsetParent 返回定位的上级盒子对象，如果父级都没有定位，返回body
+     *
      * scroll家族： scrollWidth scrollHeight scrollLeft scrollTop
      * client家族： clientWidth clientHeight clientLeft clientTop
      */

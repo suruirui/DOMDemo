@@ -24,28 +24,78 @@
       <file leaf-file-name="1.offsetWidth获取元素尺寸.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1.offsetWidth获取元素尺寸.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.032258">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="42" column="47" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2.offsetLeft获取定位尺寸.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2.offsetLeft获取定位尺寸.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2.offsetLeft获取定位尺寸.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.967742">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.15826087">
+              <caret line="34" column="55" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3.getComputedStyle()获取实际样式.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="3.getComputedStyle()获取实际样式.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/3.getComputedStyle()获取实际样式.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.645162">
+              <caret line="15" column="12" selection-start-line="5" selection-start-column="5" selection-end-line="15" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="4.创建内部和外部的样式表.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.创建内部和外部的样式表.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.580646">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="5.换肤.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/5.换肤.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.612904">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skin.spring.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skin.spring.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skin.summer.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/skin.summer.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3.className.html" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.579/3.className.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.903226">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -66,8 +116,12 @@
         <option value="$PROJECT_DIR$/offset获取元素尺寸.html" />
         <option value="$PROJECT_DIR$/1.offset获取元素尺寸.html" />
         <option value="$PROJECT_DIR$/1.offsetWidth获取元素尺寸.html" />
+        <option value="$PROJECT_DIR$/3.offsetParent.html" />
         <option value="$PROJECT_DIR$/2.offsetLeft获取定位尺寸.html" />
         <option value="$PROJECT_DIR$/3.getComputedStyle()获取实际样式.html" />
+        <option value="$PROJECT_DIR$/4.创建内部和外部的样式表.html" />
+        <option value="$PROJECT_DIR$/5.huanfu.html" />
+        <option value="$PROJECT_DIR$/5.换肤.html" />
       </list>
     </option>
   </component>
@@ -107,6 +161,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -128,14 +183,21 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DOM案例" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\dev\github\DOMDemo\样式操作" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\dev\github\DOMDemo\样式操作" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -168,6 +230,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
   </component>
@@ -183,24 +251,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -214,7 +282,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1.offsetWidth获取元素尺寸.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.032258">
+        <state vertical-scroll-proportion="0.0">
           <caret line="42" column="47" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="47" />
           <folding />
         </state>
@@ -222,7 +290,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2.offsetLeft获取定位尺寸.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.967742">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
@@ -232,6 +300,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.offsetWidth获取元素尺寸.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="47" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.990/5.getStyle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72695655">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.579/3.className.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.903226">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.299/2.style.cssText.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72695655">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.677/1.style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45913044">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhm.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin.summer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin.spring.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.getComputedStyle()获取实际样式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.645162">
+          <caret line="15" column="12" selection-start-line="5" selection-start-column="5" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.创建内部和外部的样式表.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.580646">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.换肤.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.612904">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.offsetLeft获取定位尺寸.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15826087">
+          <caret line="34" column="55" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="55" />
           <folding />
         </state>
       </provider>

@@ -3,8 +3,32 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        input{
+            color:red;
+        }
+        .test{
+            font-size: 14px;
+        }
+        .demo{
+            border: none;
+        }
+    </style>
 </head>
 <body>
-
+<input type="text" class="test" value="13013130303" id="tel"/>
 </body>
+<script>
+    var tel = document.getElementById("tel");
+    //window.getComputedStyle()得到元素实际样式
+    console.log(window.getComputedStyle(tel).color);
+    //className既保留原来的class，又添加新的class
+    tel.className += " demo";
+    tel.style.backgroundColor = "#ff0";
+    tel.style.color = "#fff";
+    //属性合写，跟写css一样
+    tel.style.cssText = "background-color:green;color:pink;";
+
+
+</script>
 </html>
