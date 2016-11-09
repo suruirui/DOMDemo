@@ -109,8 +109,9 @@
     var ol =  $("scroll").children[1];
     var lis = ol.children;
     var start = 0,target = 0;
-    //小方块切换
+
     for(var i=0; i<lis.length;i++){
+        //小方块切换
         lis[i].index = i;
         lis[i].onmouseover = function () {
             //去掉ol li的所有颜色

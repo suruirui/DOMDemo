@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #demo{
+            width: 300px;
+            /*height: 300px;*/
+            border:  1px solid red;
+            background-color: #ff0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="demo">
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+    adadsadasadadadada
+</div>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    $("demo").style.backgroundColor = "blue";
+    console.log("盒子当前宽度",$("demo").offsetWidth);
+    console.log("盒子当前高度",$("demo").offsetHeight);
+    /**
+     * offsetWidth  = width+ borderWidth +padding
+     * offsetHeight = height + border + padding
+     */
+</script>
+</html>

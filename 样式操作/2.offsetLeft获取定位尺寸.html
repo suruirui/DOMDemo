@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #father{
+            width: 500px;
+            height: 500px;
+            margin: 100px;
+            background-color: pink;
+            position: relative;
+        }
+
+        #child{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="father">
+    <div id="child"></div>
+</div>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    console.log(($("child").offsetLeft));
+    console.log(($("child").offsetTop));
+    console.dir($("child"));//dir打印对象
+//    offsetTop offsetLeft 返回距离上级盒子（带有定位）顶部/左边的位置
+//    * 如果父级都没有定位则以body为准
+    /**
+     * offset家族: offsetWidth offsetHeight offsetLeft offsetTop
+     * scroll家族： scrollWidth scrollHeight scrollLeft scrollTop
+     * client家族： clientWidth clientHeight clientLeft clientTop
+     */
+</script>
+</html>
