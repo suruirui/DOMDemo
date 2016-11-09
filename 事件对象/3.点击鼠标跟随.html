@@ -3,8 +3,43 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-
+<img src="1.gif" alt=""/>
 </body>
+<script>
+    var img = document.getElementsByTagName("img")[0];
+    var startX = 0,targetX= 0,startY = 0,targetY = 0;
+    //写成动画，要用缓动动画
+
+    document.onclick = function (event) {
+        //处理兼容
+        var event = event || window.event;
+        targetX = event.clientX - img.offsetWidth/2;
+        targetY = event.clientY - img.offsetHeight/2;
+    }
+
+    //定义定时器来执行动画
+    setInterval(function () {
+        //缓动公式
+        startX = startX + (targetX-startX)/10;
+        startY = startY + (targetY-startY)/10;
+        img.style.left = startX +'px';
+        img.style.top = startY +'px';
+    },10);
+
+
+</script>
 </html>
