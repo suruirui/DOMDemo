@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 350px;
+            height: 350px;
+            border: 1px solid #ccc;
+            margin: 100px;
+            position: relative;
+        }
+        .big{
+            position: relative;
+            width: 450px;
+            height: 450px;
+            border: 1px solid #ccc;
+            position: absolute;
+            top:0;
+            right:-460px;
+            overflow: hidden;
+            display: none;
+        }
+        .big img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .mask{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255,255,0,.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: move;
+            display: none;
+        }
+        .small{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="small">
+        <img src="images/001.jpg" alt=""/>
+        <div class="mask"></div>
+    </div>
+    <div class="big">
+        <img src="images/0001.jpg" alt=""/>
+    </div>
+</div>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    var small = $("box").children[0];
+    var big = $("box").children[1];
+    var mask = small.children[1];
+    var img = big.children[0];
+
+    //鼠标进入small的时候 ，让mask和big显示
+    small.onmouseover = function () {
+        big.style.display = "block";
+        mask.style.display = "block";
+    }
+    small.onmouseout = function () {
+        big.style.display = "none";
+        mask.style.display = "none";
+    }
+
+    //鼠标在small上移动，mask也跟着动
+    var x = 0,y=0;
+    small.onmousemove = function (event) {
+        var event = event || window.event;
+        x = event.clientX - this.offsetParent.offsetLeft - mask.offsetWidth/2;
+        y = event.clientY - this.offsetParent.offsetTop - mask.offsetHeight/2;
+        //设置水平方向边界
+        if(x < 0){
+            x =0;
+        }else if(x > this.offsetWidth - mask.offsetWidth){
+            x = this.offsetParent.offsetWidth - mask.offsetWidth;
+        }
+        //垂直方向边界
+        if(y <0){
+            y =0;
+        }else if(y > this.offsetHeight - mask.offsetHeight){
+            y = this.offsetParent.offsetHeight - mask.offsetHeight;
+        }
+        mask.style.left = x + "px";
+        mask.style.top = y +"px";
+        //鼠标在small小盒子移动的时候，右边按一定比例改变图片的位置
+        img.style.left = - x * 450 /350 +"px";
+        img.style.top = - y * 450/ 350 +"px";
+    }
+
+
+
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .scroll{
+            width: 400px;
+            height: 8px;
+            background-color: #ccc;
+            margin: 100px;
+            position: relative;
+        }
+        .bar{
+            width: 10px;
+            height: 25px;
+            background-color: #356;
+            position: absolute;
+            top: -7px;
+            cursor: pointer;
+        }
+        .mask{
+            width: 0;
+            height: 100%;
+            background-color: #356;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+<div class="scroll" id="scroll">
+    <div class="bar"></div>
+    <div class="mask"></div>
+</div>
+<span></span>
+</body>
+<script>
+        //拖拽 = 鼠标按下事件onmousedown +鼠标移动事件 onmousemove
+        function $(id) {return document.getElementById(id);}
+        var bar = $("scroll").children[0];
+        var mask = $("scroll").children[1];
+        //鼠标按下事件
+        bar.onmousedown = function(event){
+            var event = event || window.event;
+            var leftVal = event.clientX -  this.offsetLeft;
+            document.onmousemove = function (event) {
+                var num = parseInt(event.clientX - leftVal);
+                bar.style.left = num + "px";
+                if(num<0){
+                    bar.style.left = 0;
+                }else if(num > 390){
+                    bar.style.left = '390px';
+                }
+                mask.style.width =  bar.style.left;
+                //防止选择拖动
+                window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+                //计算百分比
+                var percentage = Math.floor(parseInt(bar.style.left)/390 *100);
+                $("scroll").nextElementSibling.innerHTML = "已经走了"+percentage +"%";
+            }
+        }
+        //鼠标弹起事件  什么都不做
+        document.onmouseup = function () {
+            document.onmousemove = null;
+    }
+
+</script>
+</html>
