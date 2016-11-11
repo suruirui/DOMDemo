@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 300px;
+            height: 500px;
+            border: 1px solid lightskyblue;
+            margin: 100px;
+            padding-right: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+        .scroll{
+            position: relative;
+            width:18px ;
+            height: 100%;
+            background-color: #ccc;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .content{
+            width: 300px;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px;
+        }
+        .content:first-letter{
+            font-size: 40px;
+        }
+        .bar{
+            position:absolute ;
+            width: 100%;
+            /*height: 50px;*/
+            background-color: #ff5500;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <!--内容区-->
+    <div class="content">
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+        内容文本内容文本内容文本内容文本内容文本内容文本内容文本
+    </div>
+    <div class="scroll">
+        <div class="bar"></div>
+    </div>
+</div>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    var content =  $("box").children[0];
+    var scroll = $("box").children[1];
+    var bar = scroll.children[0];
+
+    //1. 先计算拖动bar的高度 = 容器高度*容器高度/内容高度
+    bar.style.height = $("box").offsetHeight * $("box").offsetHeight / content.offsetHeight + "px";
+    //2. bar拖动
+    bar.onmousedown = function (event) {
+        var event = event || window.event;
+        var y = event.clientY - this.offsetTop;
+        var that = this;
+        document.onmousemove = function (event) {
+            var event = event || window.event;
+            var val =  event.clientY - y;
+            if(val < 0){
+                val = 0;
+            }else if(val > scroll.offsetHeight - that.offsetHeight){
+                val = scroll.offsetHeight - that.offsetHeight;
+            }else{
+                //3. bar拖动内容移动  内容移动距离 =（内容高度-容器高度）/(容器的高度-滚动条的高度)*滚动条移动距离
+                var contentVal = (content.offsetHeight-scroll.
+                                offsetHeight)/(scroll.offsetHeight-that.offsetHeight)
+                               * val;
+                content.style.top = - contentVal +'px';
+            }
+            that.style.top = val +'px';
+
+            //拖动不选择文字
+            window.getSelection() ? window.getSelection().removeAllRanges() : document.selection.empty();
+        }
+    }
+
+    //鼠标弹起
+    document.onmouseup = function () {
+        document.onmousemove = null;
+    }
+
+
+
+</script>
+</html>

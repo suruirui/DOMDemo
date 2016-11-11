@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="height: 3000px;">
+
+</body>
+<script>
+    /**
+     * scrollTop    scrollLeft
+     scrollTop     被卷去的头部
+     它就是当你滑动滚轮浏览网页的时候网页隐藏在屏幕上方的距离
+
+     得到scrollTop:  页面滚动事件
+     window.onscroll = function() { 页面滚动语句  }
+
+     谷歌浏览器 和没有声明 DTD  <DOCTYPE	> ：
+     document.body.scrollTop;
+     火狐 和其他浏览器
+     document.documentElement.scrollTop;
+     ie9+  和 最新浏览器   都认识
+     window.pageXOffset;     pageYOffset  （scrollTop）
+     兼容性写法：
+     var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      || document.body.scrollTop || 0;
+     */
+     //页面滚动事件
+      window.onscroll = function () {
+       //谷歌浏览器 和没有声明 DTD  <DOCTYPE	>
+         var scrollTop = document.body.scrollTop;
+       // 火狐 和其他浏览器
+        scrollTop = document.documentElement.scrollTop;
+       //ie9+ 和 最新浏览器   都认识window.pageYOffset;
+       scrollTop = window.pageYOffset;
+       //兼容写法
+       scrollTop = window.pageYOffset || document.documentElement.scrollTop ||
+                       document.body.scrollTop || 0;
+//       console.log(scrollTop);
+       document.title = scrollTop +'';
+      }
+</script>
+</html>

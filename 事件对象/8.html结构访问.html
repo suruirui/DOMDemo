@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>html结构访问</title>
+    <link rel="stylesheet" href=""/>
+</head>
+<body>
+<div></div>
+</body>
+</html>
+<script>
+    /**
+     * html结构访问
+     * 文档是 document
+     html   body   head
+     document.head
+     document.body
+     document.title
+     没有 document.html  取而代之的是  document.documentElement;
+     */
+    console.log(document.head.children[2]);
+    console.log(document.body);
+    console.log(document.title);
+    console.log(document.documentElement);
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .w{
+            width: 1000px;
+            height: auto;
+            margin: 0 auto;
+        }
+        .head{
+            height: 100px;
+            background-color: #ff5500;
+        }
+        .nav{
+            width: 1000px;
+            height: 40px;
+            background-color: greenyellow;
+        }
+        .container{
+            height: 2000px;
+            background-color: pink;
+        }
+        .fixed{
+            position: fixed;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="w">
+    <div class="head" id="headDiv">head</div>
+    <div class="nav" id="nav">导航</div>
+    <div class="container">
+        内容
+    </div>
+</div>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+   window.onscroll = function () {
+       //得到scrollTop的值，兼容写法
+       var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+                        || document.body.scrollTop || 0;
+       if(scrollTop >$("headDiv").offsetHeight){
+           $("nav").className += " fixed";
+       }else{
+           $("nav").className = "nav";
+       }
+   }
+</script>
+</html>
