@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="height: 4000px;">
+
+</body>
+<script>
+    // var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+//            || document.body.scrollTop || 0;
+    function scroll(){
+        if(window.pageYOffset != null){  //ie9+
+            return{
+                left:window.pageXOffset,
+                top:window.pageYOffset
+            }
+        }else if(document.compatMode == "CSS1Compat" ){  //判断是否为怪异模式，CSS1Compat有文档声明
+            return {
+                left:document.documentElement.scrollLeft,
+                top :document.documentElement.scrollTop
+            }
+        }else{  //剩下的就是怪异模式,没有文档声明的
+            return {
+                left:document.body.scrollLeft,
+                top:document.body.scrollTop
+            }
+        }
+    }
+    window.onscroll = function () {
+        var json = scroll();
+        console.log(json.top);
+    }
+</script>
+</html>

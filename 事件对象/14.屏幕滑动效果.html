@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+              margin: 0;
+              padding: 0;
+              list-style: none;
+          }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .mUl{
+            width: 100%;
+            height: 100%;
+        }
+        .mUl li{
+            width: 100%;
+            height: 100%;
+        }
+        .mOl{
+            position: fixed;
+            top:0;
+            left: 50%;
+            border: 1px solid #fff;
+            line-height: 50px;
+        }
+        .mOl li{
+            float: left;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<!--导航-->
+<ol id="mOl" class="mOl">
+    <li>首页</li>
+    <li>关注</li>
+    <li>动态</li>
+    <li>风格</li>
+    <li>作品</li>
+</ol>
+<!--内容-->
+<ul id="mUl" class="mUl">
+    <li>首页</li>
+    <li>关注</li>
+    <li>动态</li>
+    <li>风格</li>
+    <li>作品</li>
+</ul>
+</body>
+<script src="js/tools.js"></script>
+<script>
+    //定义一个颜色数组，分别给ol ul对应的添加背景色
+    var color = ['green','yellow','pink','purple','red'];
+    //找到ul 和ol所有的li
+    var ulLis = $('mUl').children;
+    var olLis = $('mOl').children;
+
+    var start = 0,target = 0, timer = null;
+    for(var j = 0;j<olLis.length;j++){
+        //给ol ul对应的添加背景色
+        ulLis[j].style.backgroundColor = color[j];
+        olLis[j].style.backgroundColor = color[j];
+
+        olLis[j].index = j;
+        olLis[j].onclick = function () {
+            clearInterval(timer);
+            target = ulLis[this.index].offsetTop;
+            timer = setInterval(function () {
+                start = start + (target - start)/10;
+                window.scrollTo(0,start);
+            },30);
+        }
+    }
+</script>
+</html>

@@ -21,43 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="8.html结构访问.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/8.html结构访问.html">
+      <file leaf-file-name="13.点击返回顶部.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/13.点击返回顶部.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.354839">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state vertical-scroll-proportion="-8.612904">
+              <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="9.窗口滚动scrollTop.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/9.窗口滚动scrollTop.html">
+      <file leaf-file-name="14.屏幕滑动效果.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/14.屏幕滑动效果.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0338984">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="10.窗口滚动固定导航.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/10.窗口滚动固定导航.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3495652">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="7.垂直滚动条.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/7.垂直滚动条.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.677419">
-              <caret line="85" column="55" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.38782609">
+              <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -68,6 +46,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Html5" />
       </list>
     </option>
@@ -86,8 +65,13 @@
         <option value="$PROJECT_DIR$/images/8.窗口滚动scrollTop.html" />
         <option value="$PROJECT_DIR$/8.窗口滚动scrollTop.html" />
         <option value="$PROJECT_DIR$/8.html结构访问.html" />
-        <option value="$PROJECT_DIR$/9.窗口滚动scrollTop.html" />
         <option value="$PROJECT_DIR$/10.窗口滚动固定导航.html" />
+        <option value="$PROJECT_DIR$/9.窗口滚动scrollTop.html" />
+        <option value="$PROJECT_DIR$/11.封装scrollTop Left返回json.html" />
+        <option value="$PROJECT_DIR$/js/tools.js" />
+        <option value="$PROJECT_DIR$/12.侧栏跟随广告.html" />
+        <option value="$PROJECT_DIR$/13.点击返回顶部.html" />
+        <option value="$PROJECT_DIR$/14.屏幕滑动效果.html" />
       </list>
     </option>
   </component>
@@ -160,8 +144,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\dev\github\DOMDemo\事件对象" />
       <recent name="E:\dev\github\DOMDemo\事件对象\images" />
+      <recent name="E:\dev\github\DOMDemo\事件对象" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\dev\github\DOMDemo\事件对象" />
@@ -222,7 +206,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -432,24 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/8.html结构访问.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.354839">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/9.窗口滚动scrollTop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0338984">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/7.垂直滚动条.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.677419">
@@ -458,10 +424,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/9.窗口滚动scrollTop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.440678">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/10.窗口滚动固定导航.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3495652">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state vertical-scroll-proportion="-2.935484">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc;n#$#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/11.封装scrollTop Left返回json.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.354838">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12.侧栏跟随广告.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.806452">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.html结构访问.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.10956522">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/13.点击返回顶部.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.612904">
+          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14.屏幕滑动效果.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38782609">
+          <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
           <folding />
         </state>
       </provider>

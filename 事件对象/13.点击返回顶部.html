@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .container{
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+        .toTop{
+            width: 35px;
+            height: 65px;
+            background:url("images/Top.jpg") no-repeat;
+            cursor: pointer;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="toTop" id="toTop"></div>
+<div class="container">
+    <p>内容部分</p> <br/>
+    <p>内容部分</p> <br/>
+    <p>内容部分</p> <br/>
+    <p>内容部分</p> <br/>
+    <p>内容部分</p> <br/>
+    <p>内容部分</p> <br/>
+    <p>内容部分</p> <br/>
+    <p>内容部分</p> <br/>
+</div>
+</body>
+<script src="js/tools.js"></script>
+<script>
+    var start = 0,target = 0;
+    var timer;
+    window.onscroll = function () {
+        //窗口滚动，火箭图标出现
+        scroll().top==0?hide("toTop"):show("toTop");
+        start = scroll().top;
+    }
+    $('toTop').onclick = function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+            start = start + (target - start)/10;
+            //让窗口回到某个位置 window.scrollTo(x,y) x代表水平方向坐标，y代表垂直方向坐标，0表示顶部
+            window.scrollTo(0,start);
+            if(start == target){  //回到顶部之后，清除动画
+                clearInterval(timer);
+            }
+        },30);
+    }
+</script>
+</html>
