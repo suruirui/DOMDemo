@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function client(){
+        if(window.innerWidth != null){
+            return{
+                width:window.innerWidth,
+                height:window.innerHeight
+            }
+        }else if(document.compatMode === 'CSS1Compat'){
+            return {
+                width:document.documentElement.clientWidth,
+                height:document.documentElement.clientHeight
+            }
+        }else{
+            return{
+                width:document.body.clientWidth,
+                height:document.body.clientHeight
+            }
+        }
+    }
+    //当页面宽度大于960像素时 页面颜色是红色
+    //当页面宽度大于640 小于960时 绿色
+    //剩下的颜色是蓝色
+    reSize();
+    window.onresize = reSize;
+            function reSize() {
+        var clientWidth = client().width;
+        if(clientWidth > 960){
+            document.body.style.backgroundColor = 'red';
+        }else if(clientWidth > 640){
+            document.body.style.backgroundColor = 'green';
+        }else{
+            document.body.style.backgroundColor = 'blue';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin:100px;
+            padding: 5px;
+            border:2px solid red;
+            white-space: nowrap;
+            /*overflow: hidden;*/
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+</div>
+</body>
+<script>
+    var box = document.getElementsByTagName("div")[0];
+    console.log(box.offsetWidth);
+    console.log(box.scrollWidth);
+    console.log(box.clientWidth);
+
+    /**
+     * clientWidth 获取网页可视区域宽度
+     * offsetWidth 获取网页总宽度，包含滚动条
+     * client是不包含border的offset
+     */
+</script>
+</html>

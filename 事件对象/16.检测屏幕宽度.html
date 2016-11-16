@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    /**
+     * 检测屏幕宽度(可视区域)
+     * ie9及其以上版本
+     * window.innerWidth
+     * 标准模式
+     * document.documentElement.clientWidth
+     * 怪异模式
+     * document.body.clientWidth
+     */
+    //获取可视区域大小的函数
+    function client(){
+        if(window.innerWidth != null){
+            return{
+                width:window.innerWidth,
+                height:window.innerHeight
+            }
+        }else if(document.compatMode === 'CSS1Compat'){
+            return {
+                width:document.documentElement.clientWidth,
+                height:document.documentElement.clientHeight
+            }
+        }else{
+            return{
+                width:document.body.clientWidth,
+                height:document.body.clientHeight
+            }
+        }
+    }
+    document.write(client().width);
+</script>
+</html>
