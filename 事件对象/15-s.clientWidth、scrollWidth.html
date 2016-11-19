@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px;
+            padding: 5px;
+            border: 1px solid #ff5500;
+            white-space: nowrap;  /*不换行*/
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    内容内内容内内容内内容内内容内内容内内容内内容内内容内内容内内容内内容内
+</div>
+</body>
+<script>
+    var box = document.getElementsByTagName("div")[0];
+    console.log('offsetWidth:',box.offsetWidth); // offsetWidth = width+padding +border
+    console.log('clientWidth',box.clientWidth);  //clientWidth = width + padding
+    console.log('scrollWidth',box.scrollWidth); //scrollWidth = width + padding 内容宽度
+
+</script>
+</html>

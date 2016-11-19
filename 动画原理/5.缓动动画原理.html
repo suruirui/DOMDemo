@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            margin-top: 40px;
+            position: absolute;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">点击</button>
+<div id="demo"></div>
+</body>
+<script>
+    var btn = document.getElementById('btn');
+    var demo = document.getElementById('demo');
+
+    var timer = null;
+    btn.onclick = function () {
+        var target = 200;
+        timer= setInterval(function () {
+            var step = (target - demo.offsetLeft)/10; //floor 向下取整 ceil 向上取整
+            step = step > 0? Math.ceil(step) :Math.floor(step); //取整处理跑不到位置
+            demo.style.left = demo.offsetLeft + step +'px';
+            if(demo.offsetLeft == target){
+                clearInterval(timer);
+            }
+        },30);
+
+    }
+</script>
+</html>

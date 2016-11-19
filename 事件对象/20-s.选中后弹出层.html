@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box,.demo{
+            width: 400px;
+            height: 200px;
+            margin: 50px;
+            border: 1px solid pink;
+        }
+        .selection{
+            width: 100px;
+            height: auto;
+            background-color: #ff0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="selection" id="selection"></div>
+<div class="box" id="box">
+    我要复制的文字我要复制的文字我要
+    复制的文字我要复制的文字我要复制的文字我要
+    复制的文字我要复制的文字我要复制的文字我要复制
+    的文字我要复制的文字我要复制的文字我要复制的文字我要
+    复制的文字我要复制的文字我要复制的文字我要复制的文字我要
+    复制的文字我要复制的文字我要复制的文字我要复制的文字
+</div>
+<div class="demo">
+    我不要的文字 我不要的文字 我不要的文字 我不要的文字
+    我不要的文字 我不要的文字 我不要的文字 我不要的文字
+    我不要的文字 我不要的文字 我不要的文字
+    我不要的文字 我不要的文字 我不要的文字 我不要的文字
+    我不要的文字 我不要的文字 我不要的文字
+</div>
+</body>
+<script src="js/tools.js"></script>
+<script>
+    //鼠标弹起的时候出现弹出层,并且跟据鼠标的位置指定弹出层出现的位置，将选中的文本，放到弹出层
+    $('box').onmouseup = function (event) {
+        var event = event || window.event;
+        var x = event.clientX;
+        var y = event.clientY;
+        //得到选中的文本 处理兼容问题
+        var txt;
+        if(window.getSelection){  //标准浏览器
+            txt = window.getSelection().toString();
+        }else{         //ie678
+            txt = document.selection.createRange().text;
+        }
+        //根据是否选中文本来判断，是否显示弹出层
+        if(txt){  //对于字符串来说 ''是false 其他都为true 对于数字来说0是false 其他都是true
+            alertBox(x,y,txt);
+        }
+    }
+    function alertBox(mouseX,mouseY,txt){
+        setTimeout(function () {  //setTimeout延迟执行
+            show('selection');
+            $('selection').style.left = mouseX + 'px';
+            $('selection').style.top = mouseY + 'px';
+            $('selection').innerHTML = txt;
+        },500);
+    }
+    //鼠标在文档任意非弹出层位置按下的时候，隐藏弹出层
+    document.onmousedown = function (event) {
+        var event = event || window.event;
+        var targetId = event.target ? event.target.id : event.srcElement.id;
+        if(targetId != 'selection'){
+            hide('selection');
+        }
+    }
+</script>
+</html>

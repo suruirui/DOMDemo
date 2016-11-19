@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            margin-top: 40px;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<button id="btn200">200</button>
+<button id="btn400">400</button>
+<div id="run"></div>
+</body>
+<script>
+    /**
+     * 动画函数封装
+     */
+    function $(id){return document.getElementById(id);}
+    $('btn200').onclick = function(){
+        animate($('run'),200);
+    }
+
+    $('btn400').onclick = function () {
+        animate($('run'),400);
+    }
+
+     function animate(obj,target){ //两个参数，obj是运动对象，target运动距离
+        obj.timer = setInterval(function () {  //obj.timer 为对象赋予一个定时器属性
+              if(obj.offsetLeft > target){
+                  clearInterval(obj.timer);  //关闭当前对象的定时器，避免不同对象互相干扰
+              }
+              obj.style.left = obj.offsetLeft + 10 +'px';
+        },20);
+    }
+</script>
+</html>

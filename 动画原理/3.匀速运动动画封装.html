@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: absolute;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<button id="btn200">200</button>
+<button id="btn400">400</button>
+<div class="box" id="box"></div>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    $('btn200').onclick = function(){
+        animate($('box'),200);
+    }
+    $('btn400').onclick = function(){
+        animate($('box'),400);
+    }
+    //  封装匀速运动
+    function animate(obj,target){
+        clearInterval(obj.timer);
+        var step = obj.offsetLeft < target ? 10:-10;
+        obj.timer = setInterval(function () {
+            var result = target - obj.offsetLeft;  //
+            obj.style.left = obj.offsetLeft + step + 'px';
+            if(Math.abs(result) <= 10){ //如果差值小于10 说明走到了
+                clearInterval(obj.timer);
+                obj.style.left = target + 'px'; //有10像素差距 直接给到
+            }
+        },20);
+    }
+</script>
+</html>

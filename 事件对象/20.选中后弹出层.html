@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 400px;
+            margin:50px;
+        }
+        #demo {
+            width: 100px;
+            height: auto;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+<span id="demo"></span>
+<div id="test">我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字</div>
+<div id="another">
+    我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字
+</div>
+<script src="js/tools.js"></script>
+<script>
+    $("test").onmouseup = function (event) {
+        var event = event || window.event;
+        var x = event.clientX;
+        var y = event.clientY;
+        var txt;
+        if(window.getSelection){
+            txt = window.getSelection().toString();
+        }else{
+            txt = document.selection.createRange().text;
+        }
+        if(txt){
+            showBox(x,y,txt);
+        }
+    }
+    function showBox(mouseX,mouseY,txt){
+        setTimeout(function () {
+            show('demo');
+            $('demo').style.left = mouseX + 'px'
+            $('demo').style.top = mouseY + 'px';
+            $('demo').innerHTML = txt;
+        },500);
+    }
+    //点击空白处隐藏
+    document.onmousedown = function (event) {
+        var event = event || window.event;
+//        alert(event.target.id);  //返回的是点击的某个对象的id event.target事件被传递到的对象
+        //判断当前对象兼容写法
+        var targetId = event.target ? event.target.id : event.srcElement.id;
+        if(targetId != 'demo'){
+            hide('demo');
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="btn">点击</button>
+</body>
+<script>
+    /**
+     * 事件冒泡：当一个元素上的事件被触发的时候，比如说鼠标点击了一个按钮，
+     * 同样的事件将会在那个元素的所有祖先元素中被触发。这一过程被称为事件的冒泡
+     * 这个事件从元素开始一直冒泡到DOM树的最上层
+     *
+     * 事件传播的三个阶段：捕获 冒泡 和目标
+     * 捕获阶段：事件从上一级标签开始往下查找，直到捕获到事件目标  外层-》里层
+     * 冒泡阶段：事件从事件目标开始，往上冒泡直到页面的最上一级标签  里层-》外层
+     *
+     * 顺序 ie: div-body -html - document
+     * 其他浏览器 div - body - html - document - window
+     * 不是所有事件都能冒泡，以下事件不冒泡：blur focus load unload
+     */
+    var btn = document.getElementById('btn');
+    document.onclick = function () {
+        alert('点击了空白处');
+    }
+    btn.onclick = function () {
+        alert('点击了按钮');
+    }
+
+    /**
+     * 阻止冒泡的方法
+     * 标准浏览器和ie (678)
+     */
+    btn.onclick = function (event) {
+        alert('点击了按钮');
+        var event = event || window.event;
+//        event.stopPropagation();//标准浏览器 阻止冒泡的方法 Propagation传播 传递
+//        event.cancelBubble = true; //ie
+        if(event && event.stopPropagation){
+            event.stopPropagation();  //w3c标准的浏览器
+        }else{
+            event.cancelBubble = true; //ie678
+        }
+    }
+</script>
+</html>

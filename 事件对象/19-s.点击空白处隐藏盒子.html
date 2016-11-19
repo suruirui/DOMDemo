@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        .mask{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .demo{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background-color: pink;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<a href="javascript:;" id="reg">注册</a>
+
+<div class="mask" id="mask"></div>
+<div class="demo" id="demo"></div>
+</body>
+<script src="js/tools.js"></script>
+<script>
+    //点击注册，显示盒子
+    $('reg').onclick = function (event) {
+        show('mask');
+        show('demo');
+        document.body.style.overflow = 'hidden'; //隐藏滚动条
+        //阻止冒泡
+        var event = event || window.event;
+        if(event && event.stopPropagation){
+            event.stopPropagation();
+        }else{
+            event.cancelBubble = true;
+        }
+    }
+    //点击空白处,隐藏盒子
+    document.onclick = function (event) {
+        var targetId = event.target ? event.target.id : event.srcElement.id;//事件目标对象event.target的兼容写法
+        if(targetId != 'demo'){
+            hide('mask');
+            hide('demo');
+        }
+    }
+</script>
+</html>

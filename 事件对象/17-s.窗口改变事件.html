@@ -8,32 +8,34 @@
 
 </body>
 <script>
+    //获得屏幕宽度
     function client(){
-        if(window.innerWidth != null){
-            return{
+        if(window.innerWidth != null){  // ie9及其以上版本
+            return {
                 width:window.innerWidth,
                 height:window.innerHeight
             }
-        }else if(document.compatMode === 'CSS1Compat'){
+        }else if(document.compatMode == 'CSS1Compat'){  //标准模式
             return {
                 width:document.documentElement.clientWidth,
                 height:document.documentElement.clientHeight
             }
-        }else{
-            return{
-                width:document.body.clientWidth,
-                height:document.body.clientHeight
-            }
+        }
+        //怪异模式
+        return {
+            width:document.body.clientWidth,
+            height:document.body.clientHeight
         }
     }
-    //当页面宽度大于960像素时 页面颜色是红色
-    //当页面宽度大于640 小于960时 绿色
-    //剩下的颜色是蓝色
-    reSize();
+    reSize(); //函数调用
+
+    //窗口尺寸改变事件
     window.onresize = reSize;
-            function reSize(){
-        var clientWidth = client().width;
-        if(clientWidth > 960){
+//    alert(reSize);  //reSize返回的是函数名本身
+    //声明reSize函数
+    function reSize(){
+        var clientWidth = client().width;  //屏幕宽度
+        if(clientWidth> 960){
             document.body.style.backgroundColor = 'red';
         }else if(clientWidth > 640){
             document.body.style.backgroundColor = 'green';

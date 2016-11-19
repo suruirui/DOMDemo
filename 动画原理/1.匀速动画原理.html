@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            margin-top: 40px;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">点击</button>
+<div id="demo"></div>
+</body>
+<script>
+    /**
+     * 匀速动画原理： 移动的距离 = offsetLeft + 步长
+     * @param id
+     * @returns {Element}
+     */
+    function $(id){return document.getElementById(id);}
+    var btn = $('btn');
+    var div = $('demo');
+    var timer = null;
+    btn.onclick = function () {
+        timer = setInterval(function () {
+            if(div.offsetLeft > 500){
+                clearInterval(timer);
+            }
+            div.style.left =  div.offsetLeft + 10 + 'px';
+        },20);
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

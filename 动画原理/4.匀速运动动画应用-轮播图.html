@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{ padding:0; margin:0; list-style:none; border:0;}
+        .all{
+            width:500px;
+            height:200px;
+            padding:7px;
+            border:1px solid #ccc;
+            margin:100px auto;
+            position:relative;
+        }
+        .screen{
+            width:500px;
+            height:200px;
+            overflow:hidden;
+            position:relative;
+        }
+
+        .screen li{ width:500px; height:200px; overflow:hidden; float:left;}
+        .screen ul{ position:absolute; left:0; top:0px; width:3000px;}
+        .all ol{ position:absolute; right:10px; bottom:10px; line-height:20px; text-align:center;}
+        .all ol li{ float:left; width:20px; height:20px; background:#fff; border:1px solid #ccc; margin-left:10px; cursor:pointer;}
+        .all ol li.current{ background:yellow;}
+    </style>
+</head>
+<body>
+<div class="all" id='all'>
+<div class="screen">
+    <ul id="ul">
+        <li><img src="images/1.jpg" width="500" height="200" /></li>
+        <li><img src="images/2.jpg" width="500" height="200" /></li>
+        <li><img src="images/3.jpg" width="500" height="200" /></li>
+        <li><img src="images/4.jpg" width="500" height="200" /></li>
+        <li><img src="images/5.jpg" width="500" height="200" /></li>
+    </ul>
+</div>
+</div>
+<script>
+    function $(id){return document.getElementById(id);}
+    function animate(obj,target){
+        clearInterval(obj.timer);
+        var step = obj.offsetLeft < target ? 10 : -10; //根据目标位置十分大于offsetLeft来决定运动的方向
+        obj.timer = setInterval(function (){
+            var distance = obj.offsetLeft - target;
+            if(Math.abs(distance) <= 10){  //如果obj.offsetLeft和target的距离不大于10，说明到位置了
+                clearInterval(obj.timer);
+            }
+            obj.style.left = obj.offsetLeft + step + 'px';
+        },10)
+    }
+    //根据图片数量动态生成小方块
+    var ul = $('all').children[0].children[0];
+    var ulLis = ul.children;
+    var ol = document.createElement('ol');
+    $('all').appendChild(ol);
+    for(var i = 0;i<ulLis.length;i++){
+        var li = document.createElement('li');
+        li.innerHTML = i+1 +'';
+       ol.appendChild(li);
+    }
+    ol.children[0].className = 'current';
+    //再生成一张图片 ，用于无缝切换
+    var li = ul.children[0].cloneNode(true);
+    ul.appendChild(li);
+    //鼠标经过小方块变色
+    var olLis = ol.children;
+    for(var i =0;i<olLis.length;i++){
+        olLis[i].index = i;
+        olLis[i].onmouseover = function () {
+            //取消所有方块的样式
+            for(var j in olLis){
+                olLis[j].className = '';
+            }
+            //给自己加上
+            this.className = 'current';
+            //做动画
+            animate(ul,-this.index * 500);
+            //记录当前索引值，让自动播放从这里开始
+            square = key = this.index;
+        }
+    }
+    var timer = null;
+    //开启定时器，让图片自动播放
+    timer = setInterval(autoPlay,1000);
+    var key = 0;   //图片索引
+    var square = 0;//小方块索引
+    function autoPlay(){  // 距离 = 索引×图片宽度
+        //从当前图片的下一张开始滚动，找到当前索引
+        key++;
+        if(key>ulLis.length - 1)  // 后判断
+        {
+            ul.style.left = 0;  // 迅速调回
+            key = 1;  // 因为第6张就是第一张  第6张播放 下次播放第2张
+        }
+        animate(ul,-key*500);
+        //小方块跟着动
+        for(var j in olLis){
+            olLis[j].className = '';
+        }
+        //给自己加上
+        square++;
+        if(square > 4){
+            square = 0;
+        }
+        olLis[square].className = 'current';
+    }
+    $('all').onmouseover = function () {
+        clearInterval(timer);
+    }
+    $('all').onmouseout = function(){
+        timer = setInterval(autoPlay,1000);
+    }
+</script>
+</body>
+</html>

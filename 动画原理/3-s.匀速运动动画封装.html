@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            margin-top: 40px;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<button id="btn200">200</button>
+<button id="btn400">400</button>
+<div id="box"></div>
+</body>
+<script>
+    function $(id){return document.getElementById(id);}
+    $('btn200').onclick = function () {
+        animate($('box'),200);
+    }
+    $('btn400').onclick = function () {
+        animate($('box'),400);
+    }
+
+    function animate(obj,target){
+        clearInterval(obj.timer);
+        var step = obj.offsetLeft < target ? 10 : -10; //根据目标位置十分大于offsetLeft来决定运动的方向
+        obj.timer = setInterval(function (){
+            var distance = obj.offsetLeft - target;
+            if(Math.abs(distance) <= 10){  //如果obj.offsetLeft和target的距离不大于10，说明到位置了
+                clearInterval(obj.timer);
+            }
+            obj.style.left = obj.offsetLeft + step + 'px';
+        },20)
+    }
+</script>
+</html>
